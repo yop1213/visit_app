@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>一覧</title>
+</head>
+<body>
+    <h1>一覧</h1>
+<p>
+    <a href="/list?sort=rating_desc">評価が高い順に並び替え</a> |
+    <a href="/list?sort=rating_asc">評価が低い順に並び替え</a>
+</p>
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>ID</th>
+            <th>日付</th>
+            <th>タイトル</th>
+            <th>場所</th>
+            <th>順位</th>
+            <th>評価</th>
+            <th>メモ</th>
+        </tr>
+
+        {% for v in visits %}
+        <tr>
+            <td>{{ v.id }}</td>
+            <td>{{ v.date }}</td>
+            <td>{{ v.company }}</td>
+            <td>{{ v.name }}</td>
+            <td>{{ v.purpose }}</td>
+            <td>{{ v.rating }}</td>
+            <td>{{ v.memo }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">入力画面に戻る</a>
+</body>
+</html>

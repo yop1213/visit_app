@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>備ボー録</title>
+</head>
+<body>
+    <h1>備ボー録</h1>
+
+    <form action="/add" method="post">
+
+        <label>日付：</label><br>
+        <input type="date" name="date"><br><br>
+
+        <label>タイトル：</label><br>
+        <input type="text" name="company"><br><br>
+
+        <label>場所：</label><br>
+        <input type="text" name="name"><br><br>
+
+        <label>順位：</label><br>
+        <input type="text" name="purpose"><br><br>
+
+        <label>評価（1〜10）：</label><br>
+<select name="rating">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+</select>
+<br><br>
+
+        <label>メモ：</label><br>
+        <textarea name="memo" rows="4" cols="40"></textarea><br><br>
+
+        <button type="submit">登録</button>
+    </form>
+
+    <br>
+    <a href="/list">一覧を見る</a>
+</body>
+</html>
